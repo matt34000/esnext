@@ -14,3 +14,63 @@ console.log(citiesId);
 citiesId.push("tokyo");
 
 console.log(citiesId);
+
+
+function getWeather(cityId) {
+
+const city = cityId.toUpperCase();
+const temperature = 20;
+	console.log('à ' + city + ' il fait ' + temperature + ' degrés');
+}
+
+getWeather("Montpellier");
+
+
+const OBJ = {};
+OBJ.city = "Montpellier";
+OBJ.temperature = 20;
+console.log(OBJ); 
+
+
+const city = OBJ.city;
+const temperature = OBJ.temperature;
+console.log(city + ' ' + temperature);
+
+
+
+function afficher(...values) {
+  values.forEach(function(val){
+  console.log(val);
+  });
+}
+afficher(citiesId);
+
+
+
+class Trip {
+  constructor(id, name, imageUrl) {
+  this.id = id;
+  this.name = name;
+  this.imageUrl = imageUrl;
+  }
+  
+
+  
+}
+
+let t1 = new Trip('paris','Paris','img/paris.jpg');
+//console.log(t1.id);
+//console.log(t1.name);
+//console.log(t1.imageUrl);
+
+console.log(t1);
+
+
+
+
+Trip.prototype.toString = function tripToString() {
+  return '' + this.id + this.name + this.imageUrl;
+}
+
+console.log(t1.toString());
+
